@@ -1,0 +1,30 @@
+{
+  "name": "solana-exporter",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "bin": {
+    "solana-exporter": "./src/index.js"
+  },
+  "scripts": {
+    "debug": "node --inspect-brk src/index.js -a DeutWrchKzcSZM9HxoXkpGfYhMVzFabkf5NQvSKDUYJ5",
+    "build": "pkg ."
+  },
+  "private": true,
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "module",
+  "dependencies": {
+    "@solana/web3.js": "^1.98.0",
+    "commander": "^13.1.0",
+    "csv-writer": "^1.6.0",
+    "dotenv": "^16.4.7"
+  },
+  "pkg": {
+    "targets": ["node18-linux-x64", "node18-macos-x64", "node18-win-x64"],
+    "assets": [
+      "src/*.js"
+    ]
+  }
+}
